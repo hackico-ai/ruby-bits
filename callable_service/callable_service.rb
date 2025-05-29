@@ -1,62 +1,36 @@
 # frozen_string_literal: true
 
-# Option 1: Syntax sugar for onle liner
-# Example: CallableServiceBase.call
+# Syntax sugar for onle liner
 class CallableServiceBase
   def self.call(...)
     new.call(...)
   end
 end
 
+# =============== Implementation ===============
 class CallableService < CallableServiceBase
   def call
-    # do something
+    'Hello, World'
   end
 end
 
-# Option 2: Block with setup
-# Example: Command.call do |command|
-#  command.name = 'Command'
-# end
-class BlockService
-  def self.call(...)
-    obj = new
-    yield(obj) if block_given?
-    obj.call(...)
-  end
-end
+# Usage
+CallableServiceBase.call # Output: 'Hello, World'
 
-class CallableService < CallableServiceBase
-  def call
-    # do something
-  end
+# =============== Testing ===============
 
-  private
-
-  attr_accessor :name
-end
-
-# Option 3: Dependency injection block with result || callback
-# Example: Command.call do |result|
-#  SendPushNotification.new(result)
-# end
-class CallbackService
-  def self.call(...)
-    obj = new
-
-    result = obj.call(...)
-    if block_given?
-      yield(result)
-    else
-      SendEmail.new(result)
+# RSpec test
+RSpec.describe CallableService do
+  describe '#call' do
+    it 'returns "Hello, World"' do
+      expect(CallableService.call).to eq('Hello, World')
     end
-
-    result
   end
 end
 
-class CallableService < CallableServiceBase
-  def call
-    # do something
+# MiniTest test
+class CallableServiceTest < Minitest::Test
+  def test_that_it_works
+    assert_equal 'Hello, World', CallableService.call
   end
 end
