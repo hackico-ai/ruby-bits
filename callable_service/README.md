@@ -6,13 +6,12 @@ In many applications, we often need to perform a series of operations that can b
 
 To handle this scenario efficiently, we can use a callable service pattern. This pattern allows us to encapsulate the logic for sending the welcome email into a dedicated service class. By doing so, we can easily manage the flow of operations and make our code more modular and testable.
 
-- [Design and Implementation:](https://github.com/hackico-ai/ruby-bits/blob/main/callable_service)
+- [Design and Implementation & Tests:](https://github.com/hackico-ai/ruby-bits/blob/main/callable_service)
 
   - [common pattern](https://github.com/hackico-ai/ruby-bits/blob/main/callable_service/callable_service.rb)
   - [callable with setup block](https://github.com/hackico-ai/ruby-bits/blob/main/callable_service/callable_service_setup_block.rb)
   - [callable with callback](https://github.com/hackico-ai/ruby-bits/blob/main/callable_service/callable_service_callback_block.rb)
 
-- [Test Snippets](https://github.com/hackico-ai/ruby-bits/blob/main/include_module_class_method/include_module_class_method.rb#L24)
 - [Advance usage](https://github.com/hackico-ai/ruby-bits/blob/main/callable_service/beta_advance_usage.rb)
 
 ### Implementation Guide
