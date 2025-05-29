@@ -30,7 +30,7 @@ end
 
 # Output: SendPushNotification.new(Hello, World)
 
-# =============== Testing ===============
+# ******************** Testing ********************
 
 RSpec.describe CallbackService do
   let(:callback_service) { CallbackService }

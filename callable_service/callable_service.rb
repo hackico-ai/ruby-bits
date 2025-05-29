@@ -19,7 +19,7 @@ end
 # Usage
 CallableServiceBase.call # Output: 'Hello, World'
 
-# =============== Testing ===============
+# ******************** Testing ********************
 
 RSpec.describe CallableService do
   let(:callable_service) { CallableService }

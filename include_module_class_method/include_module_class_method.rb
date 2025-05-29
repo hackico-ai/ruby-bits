@@ -21,8 +21,8 @@ end
 IncludeModuleClassMethod.class_method
 # Output: class_method
 
+# ******************** Testing ********************
 
-# =============== Testing ===============
 # Unit: frankly, it's also contextual test
 #       but stubbed class for unit-like isolation behavior
 RSpec.describe IncludeModule do

@@ -26,7 +26,9 @@ BlockService.call do |service|
 end
 # Output: 'Hello, Service'
 
-# =============== Testing ===============
+# ******************** Testing ********************
+
+
 RSpec.describe BlockService do
   let(:block_service) { BlockService }
   let(:result) do
